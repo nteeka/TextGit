@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+<fieldset>
+    <div class="display-label">Mã sach: @Html.Encode(Model.masach)</div>
+    <div class="display-lable">Ma loại: @Html.Encode(Model.maloai)</div>
+    <div class="display-label">Ten sach: @Model.tensach</div>
+    <p><img width="200px" height="200px" src="@Model.hinh" alt="Hinh sach" /></p>
+</fieldset>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete" />
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+
